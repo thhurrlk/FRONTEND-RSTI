@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Criando e Adicionando Elementos</title>
+    <script>
+        function criarLista() {
+            // Cria um novo elemento ul
+            let ul = document.createElement('ul');
+            
+            // Cria e adiciona três itens à lista
+            for (let i = 1; i <= 3; i++) {
+                let li = document.createElement('li');
+                li.innerText = 'Item ' + i;
+                ul.appendChild(li);
+            }
+            
+            document.body.appendChild(ul);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="criarLista()">Clique aqui para criar uma lista</button>
+</body>
+</html>

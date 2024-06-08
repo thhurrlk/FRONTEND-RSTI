@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Manipulando Estilos e Classes</title>
+    <style>
+        #elemento {
+            background-color: lightgrey;
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s ease;
+        }
+        .alterado {
+            background-color: blue;
+            width: 200px;
+        }
+    </style>
+    <script>
+        function alterarEstilo() {
+            let elemento = document.getElementById('elemento');
+            elemento.style.backgroundColor = 'blue';
+            elemento.style.width = '200px';
+        }
+    </script>
+</head>
+<body>
+    <div id="elemento"></div>
+    <button onclick="alterarEstilo()">Clique aqui para alterar o estilo</button>
+</body>
+</html>

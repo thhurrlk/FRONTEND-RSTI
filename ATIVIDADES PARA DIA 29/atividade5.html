@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Eventos de Mouse</title>
+    <style>
+        #meuDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+    <script>
+        function mudarCor() {
+            document.getElementById('meuDiv').style.backgroundColor = 'lightblue';
+        }
+
+        function restaurarCor() {
+            document.getElementById('meuDiv').style.backgroundColor = 'lightgrey';
+        }
+    </script>
+</head>
+<body>
+    <div id="meuDiv" onmouseover="mudarCor()" onmouseout="restaurarCor()"></div>
+</body>
+</html>

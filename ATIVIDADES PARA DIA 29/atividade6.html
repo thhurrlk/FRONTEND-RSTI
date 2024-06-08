@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Eventos de Teclado</title>
+    <script>
+        function atualizarParagrafo() {
+            let valorEntrada = document.getElementById('campoTexto').value;
+            document.getElementById('paragrafo').innerText = valorEntrada;
+        }
+    </script>
+</head>
+<body>
+    <label for="campoTexto">Digite algo:</label>
+    <input type="text" id="campoTexto" oninput="atualizarParagrafo()">
+    <p id="paragrafo"></p>
+</body>
+</html>

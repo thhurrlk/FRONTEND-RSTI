@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Delegação de Eventos</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        li {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgrey;
+            transition: background-color 0.3s ease;
+        }
+        .azul {
+            background-color: blue;
+        }
+        .preto {
+            background-color: black;
+            color: white; /* Adiciona cor do texto branca para melhor contraste */
+        }
+        .rosa {
+            background-color: pink;
+        }
+        .verde {
+            background-color: green;
+            color: white; /* Adiciona cor do texto branca para melhor contraste */
+        }
+        .vermelho {
+            background-color: red;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('lista').addEventListener('click', function(event) {
+                if (event.target && event.target.nodeName === 'LI') {
+                    switch(event.target.id) {
+                        case 'item1':
+                            event.target.className = 'azul';
+                            break;
+                        case 'item2':
+                            event.target.className = 'preto';
+                            break;
+                        case 'item3':
+                            event.target.className = 'rosa';
+                            break;
+                        case 'item4':
+                            event.target.className = 'verde';
+                            break;
+                        case 'item5':
+                            event.target.className = 'vermelho';
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="lista">
+        <li id="item1">Azul</li>
+        <li id="item2">Preto</li>
+        <li id="item3">Rosa</li>
+        <li id="item4">Verde</li>
+        <li id="item5">Vermelho</li>
+    </ul>
+</body>
+</html>
